@@ -4,7 +4,7 @@
     A tabela a seguir apresenta os cargos e seus respectivos aumentos:
 
     Códigos        |         Cargo           |      Aumento
-    1                   Desenvolvedor Java           30%
+    1                   Desenvolvedor Java           30%   
     2                   Analista de Redes            25%
     3                   Arquiteto DevOps             50%
     4                   Técnico de Suporte           13%
@@ -28,12 +28,16 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include <locale.h>
 
 int main() {
     
     setlocale(LC_ALL, "Portuguese");
     
+    // system("clear");
+    system("cls");
+
     char Nome[100];
     float SalarioAtual, NovoSalario, AumentoSalario;
     int CodigoCargo, Porcentagem;
@@ -42,12 +46,27 @@ int main() {
     // scanf("%s", Nome); // Lê somente a primeira palavra da string
     fgets(Nome, sizeof(Nome), stdin); // Lê todas as palavras da string independente de espaços
 
+    // system("clear");
+    system("cls");
+
     printf("Digite o salário do Funcionário: ");
     scanf("%f", &SalarioAtual);
     
+    // system("clear");
+    system("cls");
+
+    printf("Códigos        |         Cargo           |      Aumento \n");
+    printf("1                   Desenvolvedor Java             30%% \n");
+    printf("2                   Analista de Redes              25%% \n");
+    printf("3                   Arquiteto DevOps               50%% \n");
+    printf("4                   Técnico de Suporte             13%% \n");
+
     printf("Digite o código do cargo: ");
     scanf("%d", &CodigoCargo);
     
+    // system("clear");
+    system("cls");
+
     switch (CodigoCargo) {
         
         case 1:
