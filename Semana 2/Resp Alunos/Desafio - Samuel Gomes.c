@@ -31,7 +31,7 @@ int main () {
     
     X1 = (- B + sqrt(Delta)) / (2 * A);
     X2 = (- B - sqrt(Delta)) / (2 * A);
-    
+
     printf("A: %.2f \n", A);
     printf("B: %.2f \n", B);
     printf("C: %.2f \n", C);

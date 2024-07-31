@@ -72,7 +72,7 @@ int main() {
     AumentoSalario  = SalarioAtual * (Porcentagem / 100.0);
     NovoSalario     = SalarioAtual + AumentoSalario;
     
-    printf("Nome do Funcionário: Samuel Gomes \n");
+    printf("Nome do Funcionário: %s \n", Nome);
     printf("Salário atual: R$ %.2f \n", SalarioAtual);
     printf("Aumento de %d%%: R$ %.2f \n", Porcentagem, AumentoSalario);
     printf("Novo salário: R$ %.2f \n", NovoSalario);

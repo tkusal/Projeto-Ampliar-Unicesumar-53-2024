@@ -45,17 +45,16 @@ int main() {
                 resultado = numero1 / numero2;
             } else {
                 printf("Não é possível fazer divisão por zero.\n");
-                erro = 1;
+                return 1;
             }
             break;            
         default:
             printf("Opção inválida");
+            return 1;
             break;
     }
 
-    if (opc > 0 && opc < 5 && erro == 0) {
-        printf("Resultado = %.2f", resultado);
-    }    
+    printf("Resultado = %.2f", resultado);
 
     return 0;
 }
