@@ -6,6 +6,7 @@
     Saída: Imprimir o valor da raiz real
 
     Veja mais sobre a fórmula de Bhaskara em: https://www.todamateria.com.br/formula-de-bhaskara/
+    teste
 */
 
 #include <stdio.h>
@@ -31,7 +32,7 @@ int main () {
     
     X1 = (- B + sqrt(Delta)) / (2 * A);
     X2 = (- B - sqrt(Delta)) / (2 * A);
-    
+
     printf("A: %.2f \n", A);
     printf("B: %.2f \n", B);
     printf("C: %.2f \n", C);

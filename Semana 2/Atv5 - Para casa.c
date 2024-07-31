@@ -1,27 +1,91 @@
 /*
-    Escreva um algoritmo em C que receba o salário de um funcionário e o cargo de seu código.
-    De acordo com seu código, informe quanto de aumento ele teve e o valor atual de seu salário.
+    Escreva um algoritmo em C que receba o salï¿½rio de um funcionï¿½rio e o cargo de seu cï¿½digo.
+    De acordo com seu cï¿½digo, informe quanto de aumento ele teve e o valor atual de seu salï¿½rio.
     A tabela a seguir apresenta os cargos e seus respectivos aumentos:
 
-    Códigos        |         Cargo           |      Aumento
+    Cï¿½digos        |         Cargo           |      Aumento
     1                   Desenvolvedor Java           30%
     2                   Analista de Redes            25%
     3                   Arquiteto DevOps             50%
-    4                   Técnico de Suporte           13%
+    4                   Tï¿½cnico de Suporte           13%
 
-    A saída deverá ser:
-    Salário atual: R$xxxxx,xx
+    A saï¿½da deverï¿½ ser:
+    Salï¿½rio atual: R$xxxxx,xx
     Aumento de x%: R$xxx,xx
-    Novo salário:  R$xxxxx,xx
+    Novo salï¿½rio:  R$xxxxx,xx
 
     Desafio (opcional):
-    Que tal se arriscar um pouco mais em um conceito que não trabalhamos ainda? Como entrada, receba também o nome do funcionário e escrevê-lo na saída?
+    Que tal se arriscar um pouco mais em um conceito que nï¿½o trabalhamos ainda? Como entrada, receba tambï¿½m o nome do funcionï¿½rio e escrevï¿½-lo na saï¿½da?
 
-    Se for se aventurar, a saída deverá ser assim:
+    Se for se aventurar, a saï¿½da deverï¿½ ser assim:
 
-    Nome do Funcionário: xxxxxxxxxxx
-    Salário atual: R$xxxxx,xx
+    Nome do Funcionï¿½rio: xxxxxxxxxxx
+    Salï¿½rio atual: R$xxxxx,xx
     Aumento de x%: R$xxx,xx
-    Novo salário:  R$xxxxx,xx
+    Novo salï¿½rio:  R$xxxxx,xx
 
 */
+
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+
+int main () {
+    float salarioAtual, aumento, novoSalario;
+    int cod, percent;
+    char nome[15];
+
+    setlocale(LC_ALL, "Portuguese_Brazil");
+
+    system("clear");
+
+    printf("Informe o salÃ¡rio atual: ");
+    scanf("%f", &salarioAtual);
+    system("clear");
+    
+    printf("Informe o nome do usuÃ¡rio: ");
+    scanf("%s", nome);
+    fflush(stdin);
+    system("clear");    
+
+    printf("\nInforma o cÃ³digo do cargo:\n");
+    system("pause");
+    printf("1. Dev Java\n2. Analista de Redes\n3. DevOps\n4. TÃ©c. Suporte\n");
+    scanf("%d", &cod);    
+    system("clear");
+    
+    switch (cod)
+    {
+    case 1:
+        percent = 30;
+        aumento = salarioAtual * 0.3;
+        novoSalario = salarioAtual + aumento;
+        break;
+    case 2:
+        percent = 25;
+        aumento = salarioAtual * 0.25;
+        novoSalario = salarioAtual + aumento;
+        break;
+    case 3:
+        percent = 50;
+        aumento = salarioAtual * 0.5;
+        novoSalario = salarioAtual + aumento;
+        break;     
+    case 4:
+        percent = 13;
+        aumento = salarioAtual * 0.13;
+        novoSalario = salarioAtual + aumento;
+        break;      
+    default:
+        printf("Cargo invÃ¡lido");
+        return 1;
+        break;
+    }
+
+    printf("Nome do funcionÃ¡rio: %s\n", nome);
+    printf("SalÃ¡rio atual: %.2f\n", salarioAtual);
+    printf("Aumento de %d por cento: %.2f\n", percent, aumento);
+    printf("Novo salÃ¡rio: %.2f", novoSalario);
+
+    return 0;
+}
