@@ -1,27 +1,58 @@
-/*
-    Escreva um algoritmo em C que receba o salário de um funcionário e o cargo de seu código.
-    De acordo com seu código, informe quanto de aumento ele teve e o valor atual de seu salário.
-    A tabela a seguir apresenta os cargos e seus respectivos aumentos:
+#include <stdio.h>
+#include <locale.h>
 
-    Códigos        |         Cargo           |      Aumento
-    1                   Desenvolvedor Java           30%
-    2                   Analista de Redes            25%
-    3                   Arquiteto DevOps             50%
-    4                   Técnico de Suporte           13%
+int main(){
+    
+    system("cls");
+    setlocale(LC_ALL, "Portuguese");
 
-    A saída deverá ser:
-    Salário atual: R$xxxxx,xx
-    Aumento de x%: R$xxx,xx
-    Novo salário:  R$xxxxx,xx
+    char nome[50];
+    int opc, percento;
+    float aumento, salario, novosalario;
 
-    Desafio (opcional):
-    Que tal se arriscar um pouco mais em um conceito que não trabalhamos ainda? Como entrada, receba também o nome do funcionário e escrevê-lo na saída?
+    printf("Diga o seu usuÃ¡rio: ");
+    scanf("%s", nome);
 
-    Se for se aventurar, a saída deverá ser assim:
+    printf("Informe o seu salÃ¡rio: ");
+    scanf("%f", &salario);
+    
+    system("cls");
+    printf("Digite o numero correspondente ao seu cargo!\n");
+    printf("1. Desenvolvedor Java\n 2. Analista de Redes\n 3. Arquiteto DevOps\n 4. TÃ©cnico de Suporte\n");
+    scanf("%d", &opc);
+    
+    switch(opc){
+        
+    case 1:
+        percento = 30;
+        aumento = salario * 0.30;
+        novosalario = salario + aumento;
+        break;
+    case 2:
+        percento = 25;
+        aumento = salario * 0.25;
+        novosalario = salario + aumento;
+        break;
+    case 3:
+        percento = 50;
+        aumento = salario * 0.50;
+        novosalario = salario + aumento;
+        break;
+    case 4:
+        percento = 15;
+        aumento = salario * 0.15;
+        novosalario = salario + aumento;
+        break;
+    default:
+        printf("CÃ³digo InvÃ¡lido!");
+        break;
+    }
 
-    Nome do Funcionário: xxxxxxxxxxx
-    Salário atual: R$xxxxx,xx
-    Aumento de x%: R$xxx,xx
-    Novo salário:  R$xxxxx,xx
+    system("cls");
+    printf("Nome do funcionÃ¡rio: %s\n", nome);
+    printf("SalÃ¡rio Atual: %.2f\n", salario);
+    printf("O aumento foi de %d % : %.2f\n", percento, aumento);
+    printf("Seu novo salÃ¡rio Ã© %.2f:", novosalario);
 
-*/
+    return 0;
+}
