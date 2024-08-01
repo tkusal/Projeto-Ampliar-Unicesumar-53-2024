@@ -6,6 +6,7 @@
     Saída: Imprimir o valor da raiz real
 
     Veja mais sobre a fórmula de Bhaskara em: https://www.todamateria.com.br/formula-de-bhaskara/
+    teste
 */
 
 #include <stdio.h>
