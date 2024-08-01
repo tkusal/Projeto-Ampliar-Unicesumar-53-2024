@@ -1,0 +1,58 @@
+/*
+    Refatore o código abaixo, para informar na saída o valor da segunda menor
+    e segunda maior idade.
+*/
+
+#include <stdio.h>
+
+int main()
+{
+
+    int idade, menorIdade, maiorIdade;
+
+    for (int i = 1; i <= 6; i++)
+    {
+        printf("Insira uma idade: ");
+        scanf("%d", &idade);
+
+        if (i == 1)
+        {
+            menorIdade = idade;
+            maiorIdade = idade;
+        }
+
+        if (idade < menorIdade)
+        {
+            menorIdade = idade;
+        }
+
+        if (idade > maiorIdade)
+        {
+            maiorIdade = idade;
+        }
+    }
+
+    printf("A menor idade é: %d ", menorIdade);
+    if (menorIdade < 18)
+    {
+        printf("e é menor de 18.\n");
+    }
+    else
+    {
+        printf("e é maior de 18.\n");
+    }
+
+    printf("Segunda menor idade: %d \n", segundaMenor);
+
+    printf("A maior idade é: %d ", maiorIdade);
+    if (maiorIdade < 18)
+    {
+        printf("e é menor de 18.\n");
+    }
+    else
+    {
+        printf("e é maior de 18.\n");
+    }
+
+    return 0;
+}
