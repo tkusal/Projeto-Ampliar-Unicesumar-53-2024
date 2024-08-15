@@ -1,0 +1,28 @@
+/*
+    Escreva um programa que receba 9 numeros e os armazene em uma matriz 3x3.
+    A saída do programa deverá ser a soma do numeros da diagonal.
+*/
+
+#include <stdio.h>
+#include <locale.h>
+
+int main(){
+
+    setlocale(LC_ALL, "Portuguese");
+    int num[3][3], diagdir;
+
+    for (int i = 0; i < 3; i++){
+        for (int j = 0; j < 3; j++){
+            printf("Digite os numeros: \n");
+            scanf("%d", &num[i][j]);
+        }
+    }
+
+    for (int i = 0; i < 3; i++){
+        diagdir = num[i][0] + num[i][1] + num[i][2];
+    }
+
+    printf("A soma  da diagonal direita da matriz é: %d", diagdir);5
+
+    return 0;
+}
