@@ -1,6 +1,6 @@
 /*
     Escreva um programa em C que receba o nome do modelo de 
-    um carro e seu valor de FIPE.
+    4 carros e seus valores de FIPE.
 
     O programa deverá retornar o carro mais caro e o mais barato.
 */
