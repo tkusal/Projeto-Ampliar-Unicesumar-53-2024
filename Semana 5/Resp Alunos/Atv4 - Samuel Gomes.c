@@ -54,7 +54,7 @@ int main () {
         getchar();
         printf("\n\n");
 
-        system("clear");
+        system("cls");
 
         switch (opcao){
     
@@ -71,7 +71,7 @@ int main () {
                     produto[i].marca[strcspn(produto[i].marca, "\n")] = '\0';
                     getchar();
                     
-                    system("clear");
+                    system("cls");
 
                     // Descricao
                     printf("Digite a descricao do produto: ");
@@ -79,21 +79,21 @@ int main () {
                     produto[i].descricao[strcspn(produto[i].descricao, "\n")] = '\0';
                     getchar();
 
-                    system("clear");
+                    system("cls");
 
                     // Preco
                     printf("Digite o preco do produto: ");
                     scanf("%f", &produto[i].preco);
                     getchar();
 
-                    system("clear");
+                    system("cls");
 
                     // Quantidade
                     printf("Digite a quantidade em estoque do produto: ");
                     scanf("%d", &produto[i].quantidade);
                     getchar();
 
-                    system("clear");
+                    system("cls");
 
                     printf("Produto cadastrado com sucesso!\n\n");
                     printf("Codigo: %d \n", produto[i].codigo);
@@ -118,13 +118,13 @@ int main () {
                 scanf("%d", &codigo);
                 getchar();
                 
-                system("clear");
+                system("cls");
                 
                 for (int j = 0; j < i; j++) {
                     
                     if (produto[j].codigo == codigo) {
                         
-                        system("clear");
+                        system("cls");
                         
                         printf("Produto encontrado!\n\n");
                         printf("Codigo: %d \n", produto[j].codigo);
@@ -137,13 +137,13 @@ int main () {
                         scanf("%f", &produto[j].preco);
                         getchar();
                     
-                        system("clear");
+                        system("cls");
                     
                         printf("Preco alterado com sucesso!\n\n");
                     
                     } else {
                         
-                        system("clear");
+                        system("cls");
                         
                         printf("Produto nao encontrado!\n\n");
                         
@@ -158,7 +158,7 @@ int main () {
                 scanf("%d", &codigo);
                 getchar();
                 
-                system("clear");
+                system("cls");
                 
                 for (int j = 0; j < i; j++) {
                     
@@ -173,7 +173,7 @@ int main () {
                             totalVendas = totalVendas + produto[j].preco;
                             produto[j].quantidade = produto[j].quantidade - 1;
                             
-                            system("clear");
+                            system("cls");
                             
                             printf("Produto vendido com sucesso!\n");    
                             printf("Valor da venda: %.2f\n", produto[j].preco);
@@ -185,7 +185,7 @@ int main () {
                     
                     } else {
                         
-                        system("clear");
+                        system("cls");
                         
                         printf("Produto nao encontrado!\n\n");
                         
