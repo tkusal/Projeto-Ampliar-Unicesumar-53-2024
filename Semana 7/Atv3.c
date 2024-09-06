@@ -10,9 +10,9 @@ int main () {
     p = &a;
     p2 = &p;
 
+    *p = 50;
+
     **p2 = 30;
 
     printf("%d\n", a);
-
-
 }
